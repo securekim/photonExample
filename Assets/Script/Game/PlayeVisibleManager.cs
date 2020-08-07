@@ -88,7 +88,7 @@ public class PlayeVisibleManager : MonoBehaviour
             }
             else
             {
-                if (gameRoomInfo._multiPlayMode == MultiPlayMode.TeamDeath)
+                if (gameRoomInfo._multiPlayMode == MultiPlayMode.Team)
                 {
                     if (playerList[i]._photonView.Owner.GetTeam() == 
                         PhotonNetwork.LocalPlayer.GetTeam())

@@ -125,7 +125,7 @@ public class InRoomState : BaseState
         RoomInfo roomInfo = PhotonNetwork.CurrentRoom;
         CustomGameRoomData gameRoomData = CustomGameRoomData.GetCustomGameRoomData(roomInfo);
 
-        if (gameRoomData._multiPlayMode == MultiPlayMode.FreeForAll)
+        if (gameRoomData._multiPlayMode == MultiPlayMode.Free)
             _teamUi.SetActive(false);
         else
             _teamUi.SetActive(true);

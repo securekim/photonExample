@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lobby.unity
     guid: a8d1919f832c35c43a10508fdfc8d748
   - enabled: 1
-    path: Assets/Scenes/FreeForAll.unity
+    path: Assets/Scenes/Free.unity
     guid: 060ec640355503c48977cfbf26b5d87d
   - enabled: 1
-    path: Assets/Scenes/TeamDeath.unity
+    path: Assets/Scenes/Team.unity
     guid: 950890c73add71c4a87f9c6036f76e99
   m_configObjects: {}

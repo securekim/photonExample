@@ -10,14 +10,14 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public enum MultiPlayMode
 {
-    FreeForAll = 0,
-    TeamDeath
+    Free = 0,
+    Team
 }
 
 public enum RoomState
 {
     Wait = 0,
-    InGame,
+    InTest,
 }
 
 public class CreateRoomUi : MonoBehaviour
@@ -54,7 +54,7 @@ public class CreateRoomUi : MonoBehaviour
         _modeBg[0].color = Color.white;
         _modeBg[1].color = new Color(0.5f, 0.5f, 0.5f);
 
-        _multiPlayMode = MultiPlayMode.FreeForAll;
+        _multiPlayMode = MultiPlayMode.Free;
 
         _maxPlayerCount = MaxPlayerCount(_multiPlayMode);
         _maxPlayerCountText.text = _maxPlayerCount.ToString();
@@ -65,7 +65,7 @@ public class CreateRoomUi : MonoBehaviour
         _modeBg[0].color = new Color(0.5f, 0.5f, 0.5f);
         _modeBg[1].color = Color.white;
 
-        _multiPlayMode = MultiPlayMode.TeamDeath;
+        _multiPlayMode = MultiPlayMode.Team;
 
         _maxPlayerCount = MaxPlayerCount(_multiPlayMode);
         _maxPlayerCountText.text = _maxPlayerCount.ToString();
@@ -73,7 +73,7 @@ public class CreateRoomUi : MonoBehaviour
 
     byte MaxPlayerCount(MultiPlayMode mode)
     {
-        if (mode == MultiPlayMode.FreeForAll)
+        if (mode == MultiPlayMode.Free)
             return 8;
 
         return 6;

@@ -85,7 +85,7 @@ public class SelectRoomUi : MonoBehaviour
     public void JoinGame()
     {
         PhotonNetwork.CurrentRoom.SetCustomProperties(
-                    new Hashtable() { { PropertyKey.RoomState, (int)RoomState.InGame } });
+                    new Hashtable() { { PropertyKey.RoomState, (int)RoomState.InTest } });
                 
         PhotonNetwork.LoadLevel(_sceneName.text);
     }
