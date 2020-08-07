@@ -12,6 +12,7 @@ public class InLobbyState : BaseState
 
     public override void InitState()
     {
+        _selectRoomUi.InitRoomInfo();
         gameObject.SetActive(true);
 
         _createRoomUi.InitCreateRoomUi();

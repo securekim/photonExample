@@ -25,8 +25,10 @@ public class SelectRoomUi : MonoBehaviour
 
     string _targetPassword = "";
 
+    public GameObject _selectRoomUi;
     public void InitRoomInfo()
     {
+        _selectRoomUi.SetActive(false);
         _roomName.text = "";
 
         _gameMode.text = "";
@@ -42,8 +44,13 @@ public class SelectRoomUi : MonoBehaviour
         _sceneName.text = "";
     }
 
+
+
+
     public void UpdateRoomInfo(RoomInfo roomInfo, int playerCount)
     {
+        _selectRoomUi.SetActive(true);
+
         _roomName.text = roomInfo.Name;
 
         CustomGameRoomData gameRoomData = CustomGameRoomData.GetCustomGameRoomData(roomInfo);
